@@ -1,9 +1,6 @@
 # minishell
 
-The aim of this project is to program a "simple" shell using C language.
-We had to do this project in groups, so it was me & [dpavon](https://github.com/dpavon-g).
-
-We had to implement 7 built-ins like in bash:
+I had to implement 7 built-ins like in bash:
 
 - echo (with -n option)
 - cd
@@ -13,16 +10,13 @@ We had to implement 7 built-ins like in bash:
 - env
 - exit
 
-We also had to handle redirections (<, <<, >, >>), multiple pipes (working in parallel), environment variables and some signals. \
-This is how it looks:
+I also had to handle redirections (<, <<, >, >>), multiple pipes (working in parallel), environment variables and some signals.
 
- ![preview](https://github.com/durantecode/minishell/blob/master/minishell_preview.gif)
-
-## What we learned:
+## What I learned:
 
 It deepened our understanding of the terminal which is our working tool.
-We learned a lot about file descriptors, forking processes and interprocess communication which were kinda obscur to us.
-It was the first "big project" we had to do for both of us, it took us around a 2 months and a half, but in the end I think we ended up with a pretty solid shell that handles a lot of stuff, runs external programs and replicates bash in a lot of things.
+I learned a lot about file descriptors, forking processes and interprocess communication which is kinda obscur to me.
+It was the first "big project" I had to do for both of me, it took me around a 2 months and a half, but in the end I think I ended up with a pretty solid shell that handles a lot of stuff, runs external programs and replicates bash in a lot of things.
 
 If you wanna try it:
 
@@ -32,4 +26,4 @@ If you wanna try it:
 
 ## Conclusion:
 
-We had some "kill myself" moments during this project, especially with the parsing (it can be tricky), but in the end I think we really enjoyed it, and also I think it's a pretty usefull exercise as you learn a lot of things.
+I had some "kill myself" moments during this project, especially with the parsing (it can be tricky), but in the end I think I really enjoyed it, and also I think it's a pretty usefull exercise as you learn a lot of things.
