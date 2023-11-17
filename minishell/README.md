@@ -1,29 +1,38 @@
 # minishell
 
-I had to implement 7 built-ins like in bash:
+This project was a deep dive into the world of shell design and functionality. I recreated 7 essential built-in commands found in Bash:
 
-- echo (with -n option)
-- cd
-- pwd
-- export
-- unset
-- env
-- exit
+echo (with -n option)
+cd
+pwd
+export
+unset
+env
+exit
+Additionally, the minishell handles features:
 
-I also had to handle redirections (<, <<, >, >>), multiple pipes (working in parallel), environment variables and some signals.
+Redirections: (<, <<, >, >>)
+Multiple pipes: (working in parallel)
+Environment variables:
+Signals:
 
 ## What I learned:
 
-It deepened our understanding of the terminal which is our working tool.
-I learned a lot about file descriptors, forking processes and interprocess communication which is kinda obscur to me.
-It was the first "big project" I had to do for both of me, it took me around a 2 months and a half, but in the end I think I ended up with a pretty solid shell that handles a lot of stuff, runs external programs and replicates bash in a lot of things.
+This project fundamentally transformed my knowledge about the terminal, our daily working tool. I gained a thorough understanding of:
 
-If you wanna try it:
+File descriptors
+Process forking
+Interprocess communication
+Though initially obscure, these concepts became much clearer as I delved deeper into minishell development.
 
-- clone this repo.
-- run "make && ./minishell"
-- have fun.
+This was my first "big project," spanning a challenging yet rewarding journey of 2.5 months. The result is a robust and versatile shell capable of handling numerous tasks, running external programs, and replicating many functionalities of Bash.
+
+## Try it yourself:
+
+Clone this repo.
+Run make && ./minishell
+Have fun!
 
 ## Conclusion:
 
-I had some "kill myself" moments during this project, especially with the parsing (it can be tricky), but in the end I think I really enjoyed it, and also I think it's a pretty usefull exercise as you learn a lot of things.
+Although aspects like parsing posed significant hurdles, the overall experience was both enjoyable and incredibly valuable. The project provided a unique learning opportunity and a chance to explore essential programming concepts.
