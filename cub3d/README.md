@@ -1,1 +1,22 @@
 # cub3d
+
+## Description
+
+School 42's cub3d project is the implementation of a simple graphics engine that uses the miniLibX graphics library to render a 3D perspective environment based on a configuration file format. The project includes the use of raycasting techniques to simulate first-person perspective.
+
+## Objectives.
+
+1. **3D Visualization:**
+   - Implement a graphics engine to visualize a 3D perspective environment.
+
+2. **Configuration File Formatting:**
+   - Use a configuration file to define the layout of the map, textures, colors, and other elements of the environment.
+
+3. 3. **Keyboarding:**
+   - Allow the user to navigate the environment using the keys on the keyboard.
+
+4. **Raycasting Techniques:**
+   - Implement ray-casting techniques to compute the 3D representation of the scene.
+
+5. **Wall detection:**
+   - Detect collisions with walls and display the correct projection.
