@@ -9,7 +9,8 @@ export
 unset
 env
 exit
-Additionally, the minishell handles features:
+
+# Additionally, the minishell handles features:
 
 Redirections: (<, <<, >, >>)
 Multiple pipes: (working in parallel)
