@@ -6,16 +6,16 @@ The get_next_line project from school 42 is an implementation of a function that
 
 ## Goals
 
-1. **Read Lines:**.
+1. **Read Lines:**
    - Implement a function that reads and returns the next available line of a file descriptor.
 
-2. **Multiple descriptor handling:**.
+2. **Multiple descriptor handling:**
    - Make sure the function can handle multiple file descriptors simultaneously.
 
-3. 3. **Memory Management:**.
+3. **Memory Management:**
    - Avoid memory leaks and ensure efficient resource management.
 
-4. **Special character support:** **Special character support:**.
+4. **Special character support:** **Special character support:**
    - Correctly handle special characters such as '\n' when reading lines.
 
 5. **Dynamic BUFF_SIZE operation:**.
