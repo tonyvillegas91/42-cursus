@@ -9,14 +9,15 @@ School 42's FdF project is a 3D graphical map viewer that uses the school's grap
 1. **Graphical Interface:**
    - Create a graphical interface using the school's graphical library (mlx).
 
-2. **Reading Data:** Read a data file to obtain information about the height of points on the map.
+2. **Reading Data:**
    - Read a data file to obtain information about the height of points on the map.
 
-3. 3. **Projections:** Implement at least two projections (mlx).
+3. **Projections:**
    - Implement at least two projections (isometric and orthographic) to visualize the map in 3D.
 
-4. 4. **Colors:** **Colors
+4. **Colors:**
    - Assign colors to the lines according to the height of the points to improve visual readability.
 
-5. User Controls:** ** Allow user interaction, such as adjusting the height or rotating the points.
-   - Allow user interaction, such as adjusting the height or rotating the display.
+5. **User Controls:** 
+    - Allow user interaction, such as adjusting the height or rotating the points.
+   
