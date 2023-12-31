@@ -3,84 +3,155 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antville <antville@student.42.fr>         +#+  +:+       +#+         #
+#    By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/01 16:22:42 by antville          #+#    #+#              #
-#    Updated: 2021/07/12 10:55:42 by antville         ###   ########.fr        #
+#    Created: 2021/10/22 09:32:32 by dpoveda-          #+#    #+#              #
+#    Updated: 2021/11/21 21:38:35 by dpoveda-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	fdf
-LIBFT		=	libft/
-GNL			=	get_next_line/
-MLX			=	minilibx/
-LIBFT_A		=	$(addprefix $(LIBFT), libft.a)
-GNL_A		=	$(addprefix $(GNL), libgnl.a)
-MLX_A		=	$(addprefix $(MLX), libmlx.a)
+# COLORS
+NOCOL=\033[0m
+RED=\033[1;31m
+YEL=\033[1;33m
+ORG=\033[0;33m
+GRN=\033[1;32m
+DGRAY=\033[1;30m
+BLU=\033[1;34m
 
-CC			=	gcc
-INCLUDE 	=	includes
-CFLAGS		=	-Wall -Wextra -Werror -I$(INCLUDE)
-RM			=	rm -f
-SRCS		=	fdf.c \
-				srcs/alg_utils.c \
-				srcs/controls.c \
-				srcs/mouse.c \
-				srcs/keyboard.c \
-				srcs/draw.c \
-				srcs/line_alg.c \
-				srcs/project.c \
-				srcs/parse_map.c \
-				srcs/utils.c \
+# NAMES
+NAME = fdf
 
-OBJS		=	$(SRCS:%.c=%.o)
+LFT_NAME = libft.a
 
-all:			$(NAME)
+LMLX_NAME_MMS = libmlx.dylib
+LMLX_NAME_MACOS_SIERRA = libmlx.a
+LMLX_NAME_LINUX = libmlx_Linux.a
 
-$(NAME):		$(OBJS) $(LIBFT_A) $(GNL_A) $(MLX_A)
-				@$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT) -lft -L$(GNL) -lgnl -L$(MLX) -lmlx -lm -o $(NAME) -framework OpenGL -framework AppKit
-				@echo "Linked into executable \033[0;32mfdf\033[0m."
+# MAKE
+MAKE = make
 
-$(LIBFT_A):
-				@$(MAKE) -s -C $(LIBFT)
-				@echo "Compiled $(LIBFT_A)."
+# COMPILER
+CC = gcc
 
-$(GNL_A):
-				@$(MAKE) -s -C $(GNL)
-				@echo "Compiled $(GNL_A)."
+CFLAGS = -Wall -Wextra -Werror
+CCFLAGS = -Wall -Wextra -Werror
 
-$(MLX_A):
-				@$(MAKE) -s -C $(MLX)
-				@echo "Compiled $(MLX_A)."
+CCFLAGS += -D WIN_H=720 -D WIN_W=1280
+#CCFLAGS += -D WIN_H=1080 -D WIN_W=1920
 
-bonus:			all
+CFLAGS += -D BUFFER_SIZE=10
+#CFLAGS += -D BUFFER_SIZE=500
 
-.c.o:
-				@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
-				@echo "Compiling $<."
+CFLAGS += -O3
+CCFLAGS += -O3
 
-localclean:
-				@$(RM) $(OBJS)
-				@echo "Removed object files."
+#CFLAGS += -fsanitize=address -g3
+#CCFLAGS += -fsanitize=address -g3
 
-clean:			localclean
-				@$(MAKE) clean -s -C $(LIBFT)
-				@echo "Clean libft."
-				@$(MAKE) clean -s -C $(GNL)
-				@echo "Clean gnl."
-				@$(MAKE) clean -s -C $(MLX)
-				@echo "Clean mlx."
+CFLAGS += -I ./$(LFT_DIR)/inc -I ./$(LMLX_DIR) -I ./inc
 
-fclean:			localclean
-				@$(MAKE) fclean -s -C $(LIBFT)
-				@echo "Full clean libft."
-				@$(MAKE) fclean -s -C $(GNL)
-				@echo "Full clean gnl."
-				@$(MAKE) clean -s -C $(MLX)
-				@echo "Clean mlx."
-				@$(RM) $(NAME)
-				@echo "Removed executable."
+LDFLAGS = -L ./
 
-re:				fclean all
+# FDF COLORS
+#DCOLORS =	-D COLOR_1=0x00a0b0		\
+#			-D COLOR_2=0x4f372d		\
+#			-D COLOR_3=0xcc2a36		\
+#			-D COLOR_4=0xeb6841		\
+#			-D COLOR_5=0xedc951
 
-.PHONY:			all clean fclean re localclean bonus
+CFLAGS += $(DCOLORS)
+CCFLAGS += $(DCOLORS)
+
+# LIBS
+LFT = $(LFT_DIR)/$(LFT_NAME)
+LMLX = $(LMLX_DIR)/$(LMLX_NAME)
+
+# PATHS
+INC_PATH = inc
+SRC_PATH = src
+OBJ_PATH = obj
+LIB_PATH = lib
+
+# LIBS DIR
+LFT_DIR = $(LIB_PATH)/libft
+
+LMLX_DIR_LINUX = $(LIB_PATH)/mlx_linux
+LMLX_DIR_MMS = $(LIB_PATH)/mlx_mms
+LMLX_DIR_MACOS_SIERRA = $(LIB_PATH)/mlx_macos_sierra
+
+# SOURCES
+SRC_FILES =		main.c			utils.c			map_utils.c			\
+				handle_args.c	mlx_main.c		mlx_hook.c			\
+				draw.c			draw_utils.c	controls.c			\
+				mlx_utils.c		color.c			error.c
+
+SRC = $(addprefix $(SRC_PATH)/, $(SRC_FILES))
+
+OBJ_FILES = $(SRC_FILES:%.c=%.o)
+
+OBJ = $(addprefix $(OBJ_PATH)/, $(OBJ_FILES))
+
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	CFLAGS += -D LINUX
+	LDLIBS = -lft -lmlx_Linux
+	LDLIBS += -lXext -lX11 -lm -lz
+	LMLX_NAME = $(LMLX_NAME_LINUX)
+	LMLX_DIR = $(LMLX_DIR_LINUX)
+endif
+ifeq ($(UNAME_S),Darwin)
+	CFLAGS += -D OSX
+#	########## SHARED VARS       ##########
+	CCFLAGS += -framework OpenGL -framework AppKit
+	LDLIBS = -lft -lmlx
+#	########## mlx_mms           ##########
+#	LMLX_NAME = $(LMLX_NAME_MMS)
+#	LMLX_DIR = $(LMLX_DIR_MMS)
+#	########## mlx_macos_sierra  ##########
+	LMLX_NAME = $(LMLX_NAME_MACOS_SIERRA)
+	LMLX_DIR = $(LMLX_DIR_MACOS_SIERRA)
+endif
+
+.PHONY: all clean fclean re norm
+
+all: $(NAME) $(CHECKER_NAME)
+
+$(NAME): $(LFT_NAME) $(LMLX_NAME) $(OBJ)
+	$(CC) $^ -o $@ $(CCFLAGS) $(LDFLAGS) $(LDLIBS)
+
+$(LFT_NAME):
+	$(MAKE) all -sC $(LFT_DIR)
+	cp $(LFT) $(LFT_NAME)
+
+$(LMLX_NAME):
+	$(MAKE) all -sC $(LMLX_DIR) 2> /dev/null
+	cp $(LMLX) $(LMLX_NAME)
+
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c | $(OBJ_PATH)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_PATH):
+	mkdir -p $(OBJ_PATH) 2> /dev/null
+
+clean:
+	$(MAKE) clean -sC $(LFT_DIR)
+	$(MAKE) clean -sC $(LMLX_DIR)
+	rm -rf $(LFT_NAME)
+	rm -rf $(LMLX_NAME)
+	rm -rf $(OBJ_PATH)
+
+fclean: clean
+	$(MAKE) fclean -sC $(LFT_DIR)
+	rm -rf $(NAME)
+
+re: fclean all
+
+norm:
+	@printf "\n${GRN}##########${YEL} NORMINETTE ${GRN}##########${NOCOL}\n"
+	@printf "\n${GRN}LIBFT:${BLU}\n\n"
+	@norminette $(LFT_DIR)
+	@printf "\n${GRN}FDF:${BLU}\n\n"
+	@norminette $(INC_PATH)
+	@norminette $(SRC_PATH)
+	@printf "${NOCOL}"
