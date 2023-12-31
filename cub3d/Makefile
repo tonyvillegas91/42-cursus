@@ -5,103 +5,253 @@
 #                                                     +:+ +:+         +:+      #
 #    By: antville <antville@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/02/08 23:59:04 by antville          #+#    #+#              #
-#    Updated: 2022/03/15 19:02:35 by antville         ###   ########.fr        #
+#    Created: 2023/12/31 15:52:03 by antville          #+#    #+#              #
+#    Updated: 2023/12/31 15:52:03 by antville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# VARIABLE DECLARATIONS #
+
+
+# **************************************************************************** #
+#                                     VARS                                     #
+# **************************************************************************** #
+
+# COLORS
+NOCOL=\033[0m
+RED=\033[31m
+GRN=\033[32m
+YEL=\033[33m
+BLU=\033[34m
+MAG=\033[35m
+CYN=\033[36m
+
+# OS
+UNAME_S := $(shell uname -s)
+
+# **************************************************************************** #
+#                                   PROGRAM                                    #
+# **************************************************************************** #
 
 NAME = cub3D
-CC = gcc
-RM = rm -f
+
+LFT_NAME = libft.a
+
+LMLX_NAME_MMS = libmlx.dylib
+LMLX_NAME_MACOS_SIERRA = libmlx.a
+LMLX_NAME_LINUX = libmlx_Linux.a
+
+# **************************************************************************** #
+#                                   COMPILER                                   #
+# **************************************************************************** #
+
+# MAKE
 MAKE = make
-DEBUG = -g3 -fsanitize=address
-CFLAGS = -g3 -Wall -Werror -Wextra $(KEYCODES)
-UNAME = $(shell uname -s)
 
-# Properties for compiling in MacOS
-MLX_LINK = -lmlx -framework OpenGL -framework AppKit
-ESC = KEY_ESC=53
-W = KEY_W=13
-A = KEY_A=0
-S = KEY_S=1
-D = KEY_D=2
-UP = KEY_UP=126
-DOWN = KEY_DOWN=125
-LEFT = KEY_LEFT=123
-RIGHT = KEY_RIGHT=124
+# COMPILER
+CC = gcc
 
-# Propierties for compiling in Linux
-ifeq ($(UNAME), Linux)
-	MLX_LINK = -lmlx -lXext -lX11 -lm
-	ESC = KEY_ESC=65307
-	W = KEY_W=119
-	A = KEY_A=97
-	S = KEY_S=115
-	D = KEY_D=100
-	UP = KEY_UP=65362
-	DOWN = KEY_DOWN=65364
-	LEFT = KEY_LEFT=65361
-	RIGHT = KEY_RIGHT=65363
+CFLAGS = -Wall -Wextra -Werror
+
+CFLAGS += -D NAME=\"$(NAME)\"
+CFLAGS += -D WIN_H=720 -D WIN_W=1280
+#CFLAGS += -D WIN_H=1080 -D WIN_W=1920
+
+CFLAGS += -D BUFFER_SIZE=10
+
+#CFLAGS += -O3
+
+CCFLAGS = $(CFLAGS)
+
+# **************************************************************************** #
+#                                    FLAGS                                     #
+# **************************************************************************** #
+
+CFLAGS += -I ./$(LFT_DIR)/inc -I ./$(LMLX_DIR) -I ./$(INC_PATH)
+
+# **************************************************************************** #
+#                                    PATHS                                     #
+# **************************************************************************** #
+
+INC_PATH = inc
+SRC_PATH = src
+OBJ_PATH = obj
+LIB_PATH = lib
+
+# **************************************************************************** #
+#                                     LIBS                                     #
+# **************************************************************************** #
+
+# LIB FLAGS
+LDFLAGS = -L ./
+
+# LIBS
+LFT = $(LFT_DIR)/$(LFT_NAME)
+LMLX = $(LMLX_DIR)/$(LMLX_NAME)
+
+# LIBS DIR
+LFT_DIR = $(LIB_PATH)/libft
+
+LMLX_DIR_LINUX = $(LIB_PATH)/mlx_linux
+LMLX_DIR_MMS = $(LIB_PATH)/mlx_mms
+LMLX_DIR_MACOS_SIERRA = $(LIB_PATH)/mlx_macos_sierra
+
+# **************************************************************************** #
+#                                   SOURCES                                    #
+# **************************************************************************** #
+
+# SOURCES MAIN
+SRC_FILES =		main.c				error.c				utils_1.c				\
+				utils_2.c
+
+# SOURCES PARSE
+SRC_FILES +=	parser_main.c		parse_map.c			parse_config.c			\
+				parser_utils.c		buffer_fillers.c	parse_map2.c			\
+				parser_sprite_utils.c parse_config_utils.c
+
+# SOURCES MINILIBX
+SRC_FILES +=	mlx_main.c				mlx_hook.c			mlx_init.c			\
+				mlx_utils.c				mlx_loop.c			mlx_controls.c		\
+				mlx_textures.c			minimap.c			minimap_utils.c		\
+				player.c				draw.c				raycast_wall.c		\
+				raycast_wall_utils.c	raycast_sprite.c
+
+SRC = $(addprefix $(SRC_PATH)/, $(SRC_FILES))
+
+OBJ_FILES = $(SRC_FILES:%.c=%.o)
+OBJ = $(addprefix $(OBJ_PATH)/, $(OBJ_FILES))
+
+# **************************************************************************** #
+#                                CROSS COMPILE                                 #
+# **************************************************************************** #
+
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	CFLAGS += -D LINUX
+	LDLIBS = -lft -lmlx_Linux
+	LDLIBS += -lXext -lX11 -lm -lz
+	LMLX_NAME = $(LMLX_NAME_LINUX)
+	LMLX_DIR = $(LMLX_DIR_LINUX)
+endif
+ifeq ($(UNAME_S),Darwin)
+	CFLAGS += -D OSX
+	CFLAGS += -O3
+#	########## SHARED VARS       ##########
+	CCFLAGS += -framework OpenGL -framework AppKit
+	LDLIBS = -lft -lmlx
+#	########## mlx_mms           ##########
+#	LMLX_NAME = $(LMLX_NAME_MMS)
+#	LMLX_DIR = $(LMLX_DIR_MMS)
+#	########## mlx_macos_sierra  ##########
+	LMLX_NAME = $(LMLX_NAME_MACOS_SIERRA)
+	LMLX_DIR = $(LMLX_DIR_MACOS_SIERRA)
 endif
 
-# Define Keycodes depending on OS
-KEYCODES =  -D $(ESC) -D $(W) -D $(A) -D $(S) -D $(D) -D $(UP) -D $(DOWN) -D $(LEFT) -D $(RIGHT)
+# **************************************************************************** #
+#                                    RULES                                     #
+# **************************************************************************** #
 
-# COLORS #
-RED = \033[0;31m
-GREEN = \033[0;32m
-YELLOW = \033[0;33m
-GREY = \033[2;37m
-MAGENTA = \033[0;35m
-CURSIVE = \033[3m
-NO_COLOR = \033[0m
-
-# SOURCES & OBJECTS #
-SRCS =	srcs/main.c \
-		srcs/file_management/read_file.c \
-		srcs/file_management/parse_data.c \
-		srcs/file_management/check_data.c \
-		srcs/file_management/get_map.c \
-		srcs/file_management/check_map.c \
-		srcs/file_management/check_map_surrounding.c \
-		srcs/utils.c \
-		srcs/input.c \
-		srcs/player.c \
-		srcs/background.c \
-		srcs/cube.c \
-		srcs/raycast.c \
-		srcs/minimap.c \
-
-OBJS = $(SRCS:.c=.o)
-
-# RULES #
+# ALL
+PHONY := all
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@$(MAKE) -s all -C libft
-	@$(CC) $(CFLAGS) $(OBJS) $(MLX_LINK) libft/libft.a -o $(NAME)
-	@echo "$(GREY) cub3d compiled $(GREEN) ✔✔✔ $(NO_COLOR)"
+# NAME
+$(NAME): $(LFT_NAME) $(LMLX_NAME) $(OBJ)
+	@printf "\n${YEL}LINKING:${NOCOL}\n"
+	@printf "${BLU}"
+	$(CC) $^ -o $@ $(CCFLAGS) $(LDFLAGS) $(LDLIBS)
+	@printf "${NOCOL}"
+	@printf "\n${GRN}SUCCESS!${NOCOL}\n"
+	@printf "${CYN}type \"./cub3D\" to start!${NOCOL}\n"
 
-test: all
-	@echo "$(YELLOW) **** RUN TEST CUB3D **** $(NO_COLOR)"
-	@read -p "Select map number: " map; \
-	./cub3D maps/map0$${map}.cub
+# SANITIZE ADDRESS
+PHONY += sanitize
+ifeq ($(UNAME_S),Linux)
+sanitize: CFLAGS += -pedantic -g3 -fsanitize=address -fsanitize=leak -fsanitize=undefined -fsanitize=bounds -fsanitize=null
+endif
+ifeq ($(UNAME_S),Darwin)
+sanitize: CFLAGS += -pedantic -g3 -fsanitize=address
+endif
+sanitize: $(NAME)
 
+# SANITIZE THREAD
+PHONY += thread
+thread: CFLAGS += -g3 -fsanitize=thread
+thread: $(NAME)
+
+# LIBRARIES
+$(LFT_NAME): $(LFT)
+	@printf "${MAG}"
+	cp $(LFT) $(LFT_NAME)
+	@printf "${NOCOL}\n"
+$(LFT):
+	@printf "${YEL}LIBFT:${NOCOL}\n"
+	@printf "${MAG}"
+	$(MAKE) all -sC $(LFT_DIR)
+	@printf "${NOCOL}"
+
+$(LMLX_NAME): $(LMLX)
+	@printf "${MAG}"
+	cp $(LMLX) $(LMLX_NAME)
+	@printf "${NOCOL}\n"
+$(LMLX):
+	@printf "${YEL}MINILIBX:${NOCOL}\n"
+	@printf "${MAG}"
+	$(MAKE) all -sC $(LMLX_DIR) 2> /dev/null
+	@printf "${NOCOL}"
+
+# OBJ
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c | $(OBJ_PATH)
+	@printf "${BLU}"
+	$(CC) $(CFLAGS) -c $< -o $@
+	@printf "${NOCOL}"
+
+# DEP
+$(OBJ_PATH)/%.d: $(SRC_PATH)/%.c | $(OBJ_PATH)
+	@set -e; rm -f $@
+	$(CC) -M $(CFLAGS) $< > $@.$$$$
+	rm -f $@.$$$$
+
+# OBJ DIRS
+$(OBJ_PATH):
+	@printf "${MAG}"
+	mkdir -p $(OBJ_PATH)
+	@printf "${NOCOL}"
+
+# CLEAN
+PHONY += clean
 clean:
-	@clear
-	@$(RM) $(OBJS)
-	@$(MAKE) clean -C libft
-	@echo "$(RED) **** object files removed **** $(NO_COLOR)"
+	@printf "${RED}"
+	$(MAKE) clean -sC $(LFT_DIR)
+	@printf "${RED}"
+	rm -rf $(LFT_NAME)
+	rm -rf $(LMLX_NAME)
+	rm -rf $(OBJ_PATH)
+	@printf "${NOCOL}"
 
+# FULL CLEAN
+PHONY += fclean
 fclean: clean
-	@$(RM) $(NAME)
-	@$(RM) libft/libft.a
-	@echo "$(RED) **** cub3d removed **** $(NO_COLOR)"
+	@printf "${RED}"
+	$(MAKE) fclean -sC $(LFT_DIR)
+	@printf "${RED}"
+	$(MAKE) clean -sC $(LMLX_DIR)
+	@printf "${RED}"
+	rm -rf $(NAME)
+	@printf "${NOCOL}"
 
+# RE
+PHONY += re
 re: fclean all
 
-.PHONY: all re clean fclean
+# NORMINETTE
+PHONY += norme
+norme:
+	@printf "\n${GRN}##########${YEL} NORMINETTE ${GRN}##########${NOCOL}\n"
+	@printf "\n${GRN}LIBFT:${BLU}\n\n"
+	@norminette $(LFT_DIR)
+	@printf "\n${GRN}CUB3D:${BLU}\n\n"
+	@norminette $(INC_PATH)
+	@norminette $(SRC_PATH)
+	@printf "${NOCOL}"
 
-.SILENT: $(OBJS)
+.PHONY: $(PHONY)
