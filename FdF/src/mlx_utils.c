@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   mlx_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 19:38:21 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/26 19:38:22 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:39:00 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:39:00 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <fdf.h>
 #include <mlx.h>

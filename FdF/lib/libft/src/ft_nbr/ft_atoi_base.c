@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 00:18:58 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/21 17:33:48 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:33:46 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:33:46 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <libft/ft_char.h>
 #include <libft/ft_str.h>

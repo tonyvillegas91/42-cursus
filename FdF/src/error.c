@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 21:53:35 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/26 21:53:37 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:38:30 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:38:30 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <libft/ft_printf.h>
 #include <stdio.h>

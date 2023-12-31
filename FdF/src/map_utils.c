@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   map_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 21:08:59 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/12/03 02:32:53 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:38:46 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:38:46 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <fdf.h>
 #include <libft/ft_mem.h>

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/25 19:00:12 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/09/27 19:39:17 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:35:24 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:35:24 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <libft/ft_printf.h>
 #include <stddef.h>

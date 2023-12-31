@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   mlx_hook.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/25 12:26:27 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/25 12:26:28 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:38:50 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:38:50 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <fdf.h>
 #include <stdlib.h>

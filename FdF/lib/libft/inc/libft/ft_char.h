@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_char.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:42:47 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/09/27 15:45:01 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:26:18 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:26:18 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FT_CHAR_H
 # define FT_CHAR_H

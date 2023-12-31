@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlstclear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 16:31:44 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/05 13:05:00 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:30:37 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:30:37 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <libft/ft_dlst.h>
 

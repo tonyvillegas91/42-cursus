@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+         #
+#    By: antville <antville@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/14 10:39:45 by dpoveda-          #+#    #+#              #
-#    Updated: 2021/10/21 23:43:22 by dpoveda-         ###   ########.fr        #
+#    Created: 2023/12/31 14:37:43 by antville          #+#    #+#              #
+#    Updated: 2023/12/31 14:37:43 by antville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 # COMPILE
 NAME = libft.a

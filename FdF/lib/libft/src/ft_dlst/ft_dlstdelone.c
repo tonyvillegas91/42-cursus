@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlstdelone.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 16:32:43 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/04 16:33:16 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:30:42 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:30:42 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <libft/ft_dlst.h>
 

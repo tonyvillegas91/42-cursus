@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 12:31:38 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/24 12:31:40 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:38:26 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:38:26 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <fdf.h>
 #include <libft/ft_mem.h>

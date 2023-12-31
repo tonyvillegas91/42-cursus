@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 17:44:33 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/09/27 19:27:36 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:31:51 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:31:51 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <libft/ft_str.h>
 #include <unistd.h>

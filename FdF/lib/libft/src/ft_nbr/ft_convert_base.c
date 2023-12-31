@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 03:27:21 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/21 03:27:22 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 14:33:57 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 14:33:57 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <libft/ft_nbr.h>
 #include <stddef.h>
