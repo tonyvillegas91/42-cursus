@@ -51,8 +51,8 @@ chmod +x ./lib/mlx_linux/configure
 make all clean
 ```
 
-- Run `./cub3D` with a map as an argument (test maps on the `test_maps` folder)
+- Run `./cub3D` with a map as an argument (test maps on the `maps` folder)
 
 ```sh
-./cub3D ./test_maps/labyrinth.cub
+./cub3D ./maps/1.cub
 ```
