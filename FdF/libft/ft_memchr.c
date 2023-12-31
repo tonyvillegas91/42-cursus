@@ -3,39 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 13:06:41 by antville          #+#    #+#             */
-/*   Updated: 2021/04/13 13:33:00 by antville         ###   ########.fr       */
+/*   Created: 2021/04/01 10:25:51 by antville          #+#    #+#             */
+/*   Updated: 2021/04/12 11:26:01 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*str;
+	size_t	i;
 
-	while (n-- > 0)
+	i = 0;
+	while (i < n)
 	{
-		str = (unsigned char *)s;
-		if (*str == (unsigned char)c)
-		{
-			return (str);
-		}
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((void *)s);
 		s++;
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
-/*int main ()
-{
-   const char str[] = "http://www.w3cschool.cc";
-   const char ch = '.';
-   char *ret;
-
-   ret = ft_memchr(str, ch, strlen(str));
-
-   printf("|%c| 之后的字符串是 - |%s|\n", ch, ret);
-
-   return(0);
-}*/

@@ -3,27 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/16 13:08:31 by antville          #+#    #+#             */
-/*   Updated: 2021/04/16 13:08:58 by antville         ###   ########.fr       */
+/*   Created: 2021/04/05 14:45:28 by antville          #+#    #+#             */
+/*   Updated: 2021/07/01 14:44:10 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_putendl_fd(const char *s, int fd)
 {
-	char	endline;
-
-	if (s)
+	if (fd >= 0)
 	{
-		endline = '\n';
-		while (*s != 0)
-		{
-			write(fd, s, 1);
-			s++;
-		}
-		write(fd, &endline, 1);
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
 	}
 }

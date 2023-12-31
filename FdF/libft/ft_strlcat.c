@@ -3,42 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 12:35:58 by antville          #+#    #+#             */
-/*   Updated: 2021/04/14 12:41:02 by antville         ###   ########.fr       */
+/*   Created: 2021/04/01 10:53:06 by antville          #+#    #+#             */
+/*   Updated: 2021/04/05 12:09:38 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	total;
-	size_t	original;
+	size_t	itr;
+	size_t	destlen;
+	size_t	srclen;
 
-	original = size;
-	total = ft_strlen(dst) + ft_strlen(src);
-	while (*dst != 0 && size > 0)
-	{
-		dst++;
-		size--;
-	}
+	itr = 0;
+	destlen = ft_strlen(dest);
+	srclen = ft_strlen(src);
 	if (size == 0)
-		return (ft_strlen(src) + original);
-	while (*src != 0 && size > 1)
+		return (srclen);
+	if (size <= destlen)
+		return (size + srclen);
+	while (src[itr] != '\0' && itr < size - destlen - 1)
 	{
-		*dst++ = *src++;
-		size--;
+		dest[destlen + itr] = src[itr];
+		itr++;
 	}
-	*dst = 0;
-	return (total);
-	return (0);
+	dest[destlen + itr] = '\0';
+	return (destlen + srclen);
 }
-/*int main(void)
-{
-   char src[] = "cadena";
-   char dest[] = "Esta es la ";
-   printf("%lu\n", strlcat(dest, src, 0));
-   printf("%zu\n", ft_strlcat(dest, src, 0));
-}*/

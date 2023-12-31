@@ -3,38 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 12:16:08 by antville          #+#    #+#             */
-/*   Updated: 2021/04/26 15:22:09 by antville         ###   ########.fr       */
+/*   Created: 2021/03/30 16:15:59 by antville          #+#    #+#             */
+/*   Updated: 2021/04/12 11:26:17 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*a;
-	char	*b;
+	size_t			i;
+	unsigned char	*p_dest;
+	unsigned char	*p_src;
 
-	a = (char *)src;
-	b = (char *)dst;
-	if (a == 0 && b == 0)
-		return (0);
-	while (n--)
+	i = 0;
+	if (!dest && !src)
+		return (NULL);
+	p_dest = (unsigned char *)dest;
+	p_src = (unsigned char *)src;
+	while (i < n)
 	{
-		*b++ = *a++;
+		p_dest[i] = p_src[i];
+		i++;
 	}
-	return (dst);
+	return (dest);
 }
-/*int main ()
-{
-   const char src[50] = "http://www.w3cschool.cc";
-   char dest[50];
-
-   printf("Before memcpy dest = %s\n", dest);
-   ft_memcpy(dest, src, strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-   
-   return(0);
-}*/

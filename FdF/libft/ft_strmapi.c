@@ -3,44 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/22 12:15:21 by antville          #+#    #+#             */
-/*   Updated: 2021/04/22 12:24:01 by antville         ###   ########.fr       */
+/*   Created: 2021/04/05 13:02:17 by antville          #+#    #+#             */
+/*   Updated: 2021/04/05 14:08:02 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	char	*sptr;
-	int		index;
+	char			*ret;
+	unsigned int	i;
 
 	if (!s || !f)
-		return (0);
-	sptr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!sptr)
-		return (0);
-	index = 0;
-	while (s[index])
+		return (NULL);
+	ret = malloc(sizeof(*ret) * (ft_strlen(s) + 1));
+	if (!ret)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
 	{
-		sptr[index] = f(index, s[index]);
-		++index;
+		ret[i] = (*f)(i, s[i]);
+		i++;
 	}
-	sptr[index] = '\0';
-	return (sptr);
+	ret[i] = '\0';
+	return (ret);
 }
-/*char my_func(unsigned int i, char str)
-{
-	printf("My inner function: index = %d and %c\n", i, str);
-	return str - 32;
-}
-int main()
-{
-	char str[10] = "hello.";
-	printf("The result is %s\n", str);
-	char *result = ft_strmapi(str, my_func);
-	printf("The result is %s\n", result);
-	return 0;
-}*/

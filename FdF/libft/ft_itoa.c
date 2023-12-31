@@ -3,60 +3,72 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/21 13:49:01 by antville          #+#    #+#             */
-/*   Updated: 2021/04/21 13:51:31 by antville         ###   ########.fr       */
+/*   Created: 2021/04/05 12:21:53 by antville          #+#    #+#             */
+/*   Updated: 2021/04/07 15:26:39 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_nb_len(int nb)
+static int	ft_getlen(int n)
 {
-	int		len;
+	int	i;
 
-	len = 0;
-	if (nb <= 0)
-		len++;
-	while (nb)
+	i = 0;
+	if (n <= 0)
+		i++;
+	while (n != 0)
 	{
-		len++;
-		nb = nb / 10;
+		n /= 10;
+		i++;
 	}
-	return (len);
+	return (i);
+}
+
+static void	ft_reverse_str(char *str)
+{
+	int		begin;
+	int		end;
+	char	temp;
+
+	begin = 0;
+	end = ft_strlen(str) - 1;
+	while (begin < end)
+	{
+		temp = str[begin];
+		str[begin] = str[end];
+		str[end] = temp;
+		begin++;
+		end--;
+	}
 }
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*str;
-	long	nb;
+	char			*ret;
+	int				i;
+	unsigned int	tmp_nbr;
 
-	len = ft_nb_len(n);
-	nb = n;
-	str = malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (0);
-	if (nb < 0)
+	i = 0;
+	ret = malloc(sizeof(*ret) * (ft_getlen(n) + 1));
+	if (!ret)
+		return (NULL);
+	if (n < 0)
+		tmp_nbr = -1 * n;
+	else
+		tmp_nbr = n;
+	while (tmp_nbr != 0)
 	{
-		str[0] = '-';
-		nb = -nb;
+		ret[i++] = (tmp_nbr % 10) + '0';
+		tmp_nbr /= 10;
 	}
-	if (nb == 0)
-		str[0] = '0';
-	str[len--] = '\0';
-	while (nb)
-	{
-		str[len] = nb % 10 + '0';
-		len--;
-		nb = nb / 10;
-	}
-	return (str);
+	if (n == 0)
+		ret[i++] = '0';
+	if (n < 0)
+		ret[i++] = '-';
+	ret[i] = '\0';
+	ft_reverse_str(ret);
+	return (ret);
 }
-/*int main()
-{
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(987654321));
-	printf("%s\n", ft_itoa(-123456789));
-}*/

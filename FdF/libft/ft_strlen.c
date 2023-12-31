@@ -3,35 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 11:10:38 by antville          #+#    #+#             */
-/*   Updated: 2021/04/14 11:15:11 by antville         ###   ########.fr       */
+/*   Created: 2021/04/01 10:47:03 by antville          #+#    #+#             */
+/*   Updated: 2021/07/01 14:38:47 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	while (*s++ != 0)
-	{
-		len++;
-	}
-	return (len);
+	i = 0;
+	while (s && s[i] != '\0')
+		i++;
+	return (i);
 }
-/*int main ()
-{
-   char str[50];
-   int len;
-
-   strcpy(str, "This is w3cschool.cc");
-
-   len = strlen(str);
-   printf("|%s| 的长度是 |%d|\n", str, len);
-
-   return(0);
-}*/

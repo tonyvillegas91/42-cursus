@@ -3,34 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/15 11:29:16 by antville          #+#    #+#             */
-/*   Updated: 2021/04/15 11:54:38 by antville         ###   ########.fr       */
+/*   Created: 2021/04/02 11:53:25 by antville          #+#    #+#             */
+/*   Updated: 2021/05/06 16:45:03 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*new;
+	void	*ret;
 
-	new = malloc(size * count);
-	if (!new)
+	ret = malloc(nmemb * size);
+	if (!ret)
 		return (NULL);
-	ft_memset(new, 0, count * size);
-	return (new);
+	ft_bzero(ret, nmemb * size);
+	return (ret);
 }
-/*int main(void)
-{
-   long *buffer;
-
-   buffer = (long *)calloc( 40, sizeof( long ) );
-   if( buffer != NULL )
-      printf( "Allocated 40 long integers\n" );
-   else
-      printf( "Can't allocate memory\n" );
-   free( buffer );
-}*/

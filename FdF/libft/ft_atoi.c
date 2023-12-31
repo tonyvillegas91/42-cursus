@@ -3,52 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 13:19:54 by antville          #+#    #+#             */
-/*   Updated: 2021/04/28 11:45:57 by antville         ###   ########.fr       */
+/*   Created: 2021/04/02 11:20:34 by antville          #+#    #+#             */
+/*   Updated: 2021/04/21 12:09:18 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	my_isspace(char c)
+int	ft_atoi(const char *nptr)
 {
-	if (c == '\t' || c == '\n' || c == '\r')
-		return (1);
-	else if (c == '\f' || c == '\v' || c == ' ')
-		return (1);
-	else
-		return (0);
-}
+	int		i;
+	int		neg;
+	long	value;
 
-int	ft_atoi(const char *str)
-{
-	unsigned long long	res;
-	int					negative;
-
-	negative = 1;
-	res = 0;
-	while (my_isspace(*str))
-		str++;
-	if (*str == '-')
+	i = 0;
+	value = 0;
+	neg = 0;
+	while ((nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13)))
+		i++;
+	if (nptr[i] == '-')
+		neg = 1;
+	if (nptr[i] == '-' || nptr[i] == '+')
+		i++;
+	while (nptr[i] != '\0' && ft_isdigit(nptr[i]))
 	{
-		negative = -1;
-		str++;
+		if (value > 922337203685477580 || (value == 922337203685477580
+				&& ((!neg && nptr[i] - '0' > 7) || (neg && nptr[i] - '0' > 8))))
+			return (-1 * !neg);
+		else
+			value = (value * 10) + nptr[i++] - '0';
 	}
-	else if (*str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-		res = (res * 10) + (*str++ - 48);
-	if (res > 9223372036854775807 && negative > 0)
-		return (-1);
-	if (res - 1 > 9223372036854775807 && negative < 0)
-		return (0);
-	return (negative * res);
+	if (neg)
+		value = -value;
+	return (value);
 }
-/*int main(void)
-{
-	char *str = "-4y58knjh";
-	printf("%d\n", atoi(str));
-	printf("%d\n", ft_atoi(str));
-}*/

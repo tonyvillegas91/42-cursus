@@ -3,65 +3,84 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antville <antville@student.42.fr>          +#+  +:+       +#+         #
+#    By: antville <antville@student.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/06 19:47:29 by antville          #+#    #+#              #
-#    Updated: 2021/10/28 17:44:49 by antville         ###   ########.fr        #
+#    Created: 2021/07/01 16:22:42 by antville          #+#    #+#              #
+#    Updated: 2021/07/12 10:55:42 by antville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= fdf
+NAME		=	fdf
+LIBFT		=	libft/
+GNL			=	get_next_line/
+MLX			=	minilibx/
+LIBFT_A		=	$(addprefix $(LIBFT), libft.a)
+GNL_A		=	$(addprefix $(GNL), libgnl.a)
+MLX_A		=	$(addprefix $(MLX), libmlx.a)
 
-CFLAGS	= -Wall -Wextra -Werror -g3 -fsanitize=address
-LINK	= -lmlx -framework OpenGL -framework AppKit
-SRCS	= 	drw.c \
-			read.c \
-			color.c \
-			get_next_line.c \
-			ajust.c \
-			isometric.c \
-			hook.c \
-			help.c \
-			free.c \
-			get_color.c \
-			sizes.c \
-			fill_maps.c \
-			mini_printf.c \
+CC			=	gcc
+INCLUDE 	=	includes
+CFLAGS		=	-Wall -Wextra -Werror -I$(INCLUDE)
+RM			=	rm -f
+SRCS		=	fdf.c \
+				srcs/alg_utils.c \
+				srcs/controls.c \
+				srcs/mouse.c \
+				srcs/keyboard.c \
+				srcs/draw.c \
+				srcs/line_alg.c \
+				srcs/project.c \
+				srcs/parse_map.c \
+				srcs/utils.c \
 
-OBJS	= $(SRCS:.c=.o)
-CC		= 	gcc
-INCLUDES = -I./includes
+OBJS		=	$(SRCS:%.c=%.o)
 
-all: $(NAME)
+all:			$(NAME)
 
-BCyan = \033[1;36m
-GREEN = \033[0;32m
-Yellow = \033[0;33m
-Red = \033[0;31m
-NO_COLOR = \033[0m
+$(NAME):		$(OBJS) $(LIBFT_A) $(GNL_A) $(MLX_A)
+				@$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT) -lft -L$(GNL) -lgnl -L$(MLX) -lmlx -lm -o $(NAME) -framework OpenGL -framework AppKit
+				@echo "Linked into executable \033[0;32mfdf\033[0m."
 
-$(NAME): $(OBJS)
-	@$(MAKE) -C ./libft
-	@$(CC) $(CFLAGS) libft/libft.a $(OBJS) $(LINK) -o $(NAME)
-	@echo "$(GREEN)[COMPILED]$(NO_COLOR)"
+$(LIBFT_A):
+				@$(MAKE) -s -C $(LIBFT)
+				@echo "Compiled $(LIBFT_A)."
 
-clean:
-	rm -rf $(OBJS)
-	@$(MAKE) fclean -C ./libft
-	@echo "$(Yellow)[CLEAN]$(NO_COLOR)"
+$(GNL_A):
+				@$(MAKE) -s -C $(GNL)
+				@echo "Compiled $(GNL_A)."
 
-fclean: clean
-	rm -rf $(NAME)
-	@echo "$(Red)[FCLEAN]$(NO_COLOR)"
-	
-re: fclean all
+$(MLX_A):
+				@$(MAKE) -s -C $(MLX)
+				@echo "Compiled $(MLX_A)."
 
-test: all
-	@echo "$(GREEN)------------------------------------------[MAPS]------------------------------------------$(NO_COLOR)"
-	@ls ./test_maps_3 | cut -d "." -f 1 | column -c 100
-	@echo "$(GREEN)------------------------------------------------------------------------------------------$(NO_COLOR)"
-	@echo "$(Red)[Reading map..]$(NO_COLOR)"
-	@read -p "Select map name: " map; \
-	./fdf ./test_maps_3/$${map}.fdf
+bonus:			all
 
-.PHONY: all clean fclean re bonus test
+.c.o:
+				@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+				@echo "Compiling $<."
+
+localclean:
+				@$(RM) $(OBJS)
+				@echo "Removed object files."
+
+clean:			localclean
+				@$(MAKE) clean -s -C $(LIBFT)
+				@echo "Clean libft."
+				@$(MAKE) clean -s -C $(GNL)
+				@echo "Clean gnl."
+				@$(MAKE) clean -s -C $(MLX)
+				@echo "Clean mlx."
+
+fclean:			localclean
+				@$(MAKE) fclean -s -C $(LIBFT)
+				@echo "Full clean libft."
+				@$(MAKE) fclean -s -C $(GNL)
+				@echo "Full clean gnl."
+				@$(MAKE) clean -s -C $(MLX)
+				@echo "Clean mlx."
+				@$(RM) $(NAME)
+				@echo "Removed executable."
+
+re:				fclean all
+
+.PHONY:			all clean fclean re localclean bonus

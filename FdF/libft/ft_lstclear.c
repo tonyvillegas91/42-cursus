@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 15:35:01 by antville          #+#    #+#             */
-/*   Updated: 2021/04/29 15:35:21 by antville         ###   ########.fr       */
+/*   Created: 2021/04/07 17:21:30 by antville          #+#    #+#             */
+/*   Updated: 2021/04/08 11:34:22 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*old_elem;
+	t_list	*tmp;
 
-	if (!del)
-		return ;
-	while (*lst)
+	if (lst)
 	{
-		del((*lst)->content);
-		old_elem = *lst;
-		*lst = old_elem->next;
-		free(old_elem);
+		while (*lst)
+		{
+			tmp = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = tmp;
+		}
 	}
-	*lst = NULL;
 }

@@ -3,44 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 12:29:15 by antville          #+#    #+#             */
-/*   Updated: 2021/04/13 13:30:03 by antville         ###   ########.fr       */
+/*   Created: 2021/04/01 09:35:47 by antville          #+#    #+#             */
+/*   Updated: 2021/04/12 11:25:43 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-void	*ft_memccpy(void *dst, const void *src,
-					int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	unsigned char	*a;
-	unsigned char	*b;
+	size_t			i;
+	unsigned char	*p_dest;
+	unsigned char	*p_src;
 
-	a = (unsigned char *)src;
-	b = (unsigned char *)dst;
-	while (n-- > 0)
+	i = 0;
+	p_dest = (unsigned char *)dest;
+	p_src = (unsigned char *)src;
+	while (i < n)
 	{
-		*b = *a;
-		if (*a == (unsigned char)c)
-			return ((void *)b + 1);
-		a++;
-		b++;
+		p_dest[i] = p_src[i];
+		if (p_src[i] == (unsigned char)c)
+			return (dest + i + 1);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
-/*char string1[60] = "The quick brown dog jumps over the lazy fox";
-
-int main( void )
-{
-   char buffer[61];
-   char *pdest;
-
-   printf( "Function: _memccpy 60 characters or to character 's'\n" );
-   printf( "Source: %s\n", string1 );
-   pdest = ft_memccpy( buffer, string1, 's', 60 );
-   *pdest = '\0';
-   printf( "Result: %s\n", buffer );
-   printf( "Length: %lu characters\n", strlen( buffer ) );
-}*/

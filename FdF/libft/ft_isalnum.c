@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 15:37:48 by antville          #+#    #+#             */
-/*   Updated: 2021/04/14 15:39:14 by antville         ###   ########.fr       */
+/*   Created: 2021/04/02 11:27:18 by antville          #+#    #+#             */
+/*   Updated: 2021/04/06 10:50:03 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (c > 64 && c < 91)
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
-	else if (c > 96 && c < 123)
-		return (1);
-	else if (c > 47 && c < 58)
-		return (1);
-	else
-		return (0);
+	return (0);
 }
-/*int main(void)
-{
-	char *str = "-4y58k.njh";
-	printf("%d\n", isalnum(str[6]));
-	printf("%d\n", ft_isalnum(str[6]));
-}*/

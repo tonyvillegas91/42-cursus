@@ -3,53 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/20 11:56:25 by antville          #+#    #+#             */
-/*   Updated: 2021/04/20 13:23:12 by antville         ###   ########.fr       */
+/*   Created: 2021/04/02 14:44:59 by antville          #+#    #+#             */
+/*   Updated: 2021/04/21 15:55:45 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strsub(char *str, unsigned int start, size_t len, char const *s)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	int	j;
-
-	j = 0;
-	while (j < (int)len && s[j] != '\0')
-	{
-		str[j] = s[start];
-		j++;
-		start++;
-	}
-	str[j] = 0;
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*str;
+	char			*ret;
+	unsigned int	i;
+	unsigned int	s_len;
 
 	if (!s)
-		return (0);
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
-	if (start >= ft_strlen(s))
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		ret = malloc(sizeof(char));
+	else if (len < s_len - start)
+		ret = malloc(sizeof(char) * (len + 1));
+	else
+		ret = malloc(sizeof(char) * (s_len - start + 1));
+	if (!ret)
+		return (NULL);
+	i = 0;
+	while (start < s_len && s[start + i] != '\0' && i < len)
 	{
-		str = malloc(1);
-		if (str == NULL)
-			return (0);
-		str[0] = '\0';
-		return (str);
+		ret[i] = s[start + i];
+		i++;
 	}
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (str == NULL)
-		return (0);
-	ft_strsub(str, start, len, s);
-	return (str);
+	ret[i] = '\0';
+	return (ret);
 }
-/*int	main(void)
-{
-	char *a = "i just want this part #############";
-	printf("%s\n", ft_substr(a, 5, 6));
-}*/

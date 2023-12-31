@@ -3,29 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/22 13:52:48 by antville          #+#    #+#             */
-/*   Updated: 2021/04/22 16:37:01 by antville         ###   ########.fr       */
+/*   Created: 2021/04/07 16:21:02 by antville          #+#    #+#             */
+/*   Updated: 2021/04/07 16:38:13 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*out;
+	t_list	*ptr;
 
-	out = (t_list *)malloc(sizeof(t_list));
-	if (!out)
+	ptr = malloc(sizeof(*ptr));
+	if (!ptr)
 		return (NULL);
-	out->content = content;
-	out->next = 0;
-	return (out);
+	ptr->content = content;
+	ptr->next = NULL;
+	return (ptr);
 }
-/*int		main(void)
-{
-	char	str[] = "lorem ipsum dolor sit";
-	t_list	*elem;
-	elem = ft_lstnew((void *)str);
-	printf("\n%s\n", elem->content);
-}*/

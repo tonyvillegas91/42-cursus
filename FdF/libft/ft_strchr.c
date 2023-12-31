@@ -3,28 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 12:43:43 by antville          #+#    #+#             */
-/*   Updated: 2021/04/14 12:45:41 by antville         ###   ########.fr       */
+/*   Created: 2021/04/02 10:45:59 by antville          #+#    #+#             */
+/*   Updated: 2021/04/12 11:30:14 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c && *s != 0)
-		s++;
-	if (*s == (char)c)
-		return ((char *)s);
-	else
-		return (0);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i++;
+	}
+	if ((char)c == '\0')
+		return ((char *)(s + i));
+	return (NULL);
 }
-/*int main(void)
-{
-   char *src = "Esta es *la cadena de prueba";
-   printf("%s\n", strchr(src, '*'));
-   printf("%s\n", ft_strchr( src, '*'));
-}*/

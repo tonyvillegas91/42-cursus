@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 12:51:47 by antville          #+#    #+#             */
-/*   Updated: 2021/04/15 11:13:21 by antville         ###   ########.fr       */
+/*   Created: 2021/04/02 10:50:45 by antville          #+#    #+#             */
+/*   Updated: 2021/04/06 11:28:53 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		pos;
+	int	i;
 
-	pos = ft_strlen(s);
-	while (pos >= 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (s[pos] == (char)c)
-			return ((char *)&s[pos]);
-		pos--;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	return (0);
+	return (NULL);
 }
-/*int main(void)
-{
-   char *src = "Esta es *la cadena *de prueba";
-   printf("%s\n", strrchr(src, '*'));
-   printf("%s\n", ft_strrchr( src, '*'));
-}*/
