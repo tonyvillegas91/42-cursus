@@ -26,7 +26,7 @@ Process forking
 Interprocess communication
 Though initially obscure, these concepts became much clearer as I delved deeper into minishell development.
 
-This was my first "big project," spanning a challenging yet rewarding journey of 2.5 months. The result is a robust and versatile shell capable of handling numerous tasks, running external programs, and replicating many functionalities of Bash.
+This was my first "big project," spanning a challenging yet rewarding journey of 6 months. The result is a robust and versatile shell capable of handling numerous tasks, running external programs, and replicating many functionalities of Bash.
 
 ## Try it yourself:
 
