@@ -10,18 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <libft/ft_printf.h>
 #include <stdio.h>
 
-void	err_exit(const char *err, const char *msg)
+// Función para imprimir un mensaje de error y salir del programa.
+void err_exit(const char *err, const char *msg)
 {
-	ft_dprintf(STDERR_FILENO, "%s: %s\n", err, msg);
-	exit(EXIT_FAILURE);
+    ft_dprintf(STDERR_FILENO, "%s: %s\n", err, msg);
+    exit(EXIT_FAILURE);
 }
 
-void	perror_exit(const char *str)
+// Función para imprimir un mensaje de error perror y salir del programa.
+void perror_exit(const char *str)
 {
-	perror(str);
-	exit(EXIT_FAILURE);
+    perror(str);
+    exit(EXIT_FAILURE);
 }
+
