@@ -15,6 +15,7 @@
 #include <mlx.h>
 #include <math.h>
 
+// Función para aplicar proyección isométrica a las coordenadas (x, y, z).
 void	isometric(t_vars *vars, int *x, int *y, int z)
 {
 	int	prev_x;
@@ -28,6 +29,7 @@ void	isometric(t_vars *vars, int *x, int *y, int z)
 	*y = -z + (prev_x + prev_y) * sin(0.523599);
 }
 
+// Funciones para realizar rotación alrededor del eje X, Y y Z.
 void	rot_x(t_vars *vars, int *y, int *z)
 {
 	float	prev_y;
@@ -55,6 +57,7 @@ void	rot_z(t_vars *vars, int *x, int *y)
 	*y = (prev_x * sin(vars->rot_z)) + (*y * cos(vars->rot_z));
 }
 
+// Función para poner un píxel en la imagen con el color dado.
 void	img_pixel_put(t_vars *vars, int x, int y, int color)
 {
 	int	pixel;

@@ -16,6 +16,7 @@
 #include <mlx.h>
 #include <math.h>
 
+// Función para dibujar el menú de controles en la ventana.
 static void	draw_menu(t_vars *vars)
 {
 	int		y;
@@ -38,6 +39,7 @@ static void	draw_menu(t_vars *vars)
 	mlx_string_put(mlx, win, 15, y += 25, WHITE, "(Isometric and Parallel)");
 }
 
+// Función para calcular el valor absoluto de un entero.
 static int	ft_abs(int a)
 {
 	if (a < 0)
@@ -45,6 +47,7 @@ static int	ft_abs(int a)
 	return (a);
 }
 
+// Función para inicializar las variables utilizadas en el algoritmo de Bresenham.
 static void	initialise_bresenham(t_point *start, t_point *end,
 	t_point *delta, t_point *sign)
 {
@@ -58,6 +61,7 @@ static void	initialise_bresenham(t_point *start, t_point *end,
 		sign->y = 1;
 }
 
+// Función que implementa el algoritmo de Bresenham para dibujar líneas.
 static void	bresenham(t_vars *vars, t_point start, t_point end)
 {
 	t_point	cur;
@@ -86,12 +90,14 @@ static void	bresenham(t_vars *vars, t_point start, t_point end)
 	}
 }
 
+// Función principal para dibujar la escena.
 void	draw(t_vars *vars)
 {
 	int	x;
 	int	y;
-
+	// Limpia el contenido de la imagen.
 	ft_bzero(vars->img->addr, WIN_H * WIN_W * (vars->img->bpp / 8));
+	// Verifica si se ha aplicado el zoom.
 	if (vars->zoom)
 	{
 		y = -1;
@@ -111,6 +117,8 @@ void	draw(t_vars *vars)
 			}
 		}
 	}
+	// Coloca la imagen en la ventana.
 	mlx_put_image_to_window(vars->mlx, vars->win, vars->img->img, 0, 0);
+	// Dibuja el menú de controles.
 	draw_menu(vars);
 }
