@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ulonglen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/26 11:55:53 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/09/26 11:56:09 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 11:05:55 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 11:05:55 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 int	ft_ulonglen(unsigned long n)
 {

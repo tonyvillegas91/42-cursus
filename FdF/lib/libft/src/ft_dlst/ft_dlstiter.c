@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlstiter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 16:33:29 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/04 16:34:06 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 11:00:31 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 11:00:31 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <libft/ft_dlst.h>
 

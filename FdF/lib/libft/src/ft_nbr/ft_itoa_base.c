@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 01:53:11 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/21 01:53:12 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 11:05:20 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 11:05:20 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <libft/ft_nbr.h>
 #include <libft/ft_str.h>

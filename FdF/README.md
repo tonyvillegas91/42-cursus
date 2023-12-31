@@ -20,4 +20,39 @@ School 42's FdF project is a 3D graphical map viewer that uses the school's grap
 
 5. **User Controls:** 
     - Allow user interaction, such as adjusting the height or rotating the points.
-   
+
+# How to use
+
+## Clone repo and submodules
+
+```sh
+git clone --recurse-submodules https://github.com/izenynn/fdf.git
+```
+
+## Linux extra steps
+
+- If you are using Linux, firts you will need to install a few dependencies
+
+```sh
+sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
+```
+
+- Also, give execution permissions to the file `./lib/mlx_linux/configure`
+
+```sh
+chmod +x ./lib/mlx_linux/configure
+```    
+
+## Compile
+
+- Run `make` (make rules: `all`, `clean`, `fclean` and `re`)
+
+```sh
+make all clean
+```
+
+- Run `./fdf` with a map as an argument (test maps on the `test_maps` folder)
+
+```sh
+./fdf ./test_map/42.fdf
+```

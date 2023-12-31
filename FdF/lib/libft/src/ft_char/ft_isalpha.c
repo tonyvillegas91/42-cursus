@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 17:31:37 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/09/27 19:22:24 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 10:58:24 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 10:58:24 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <libft/ft_char.h>
 

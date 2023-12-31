@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlst.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 15:54:10 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/10/04 16:11:04 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 10:57:06 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 10:57:06 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef FT_DLST_H
 # define FT_DLST_H

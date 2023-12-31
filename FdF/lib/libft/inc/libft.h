@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:33:01 by dpoveda-          #+#    #+#             */
-/*   Updated: 2021/09/27 18:30:57 by dpoveda-         ###   ########.fr       */
+/*   Created: 2023/12/31 10:58:04 by antville          #+#    #+#             */
+/*   Updated: 2023/12/31 10:58:04 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
