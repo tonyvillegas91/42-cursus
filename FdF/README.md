@@ -26,7 +26,7 @@ School 42's FdF project is a 3D graphical map viewer that uses the school's grap
 ## Clone repo and submodules
 
 ```sh
-git clone --recurse-submodules https://github.com/izenynn/fdf.git
+git clone --recurse-submodules https://github.com/tonyvillegas91/42-cursus.git
 ```
 
 ## Linux extra steps
