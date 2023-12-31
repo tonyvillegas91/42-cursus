@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/31 10:59:39 by antville          #+#    #+#             */
-/*   Updated: 2023/12/31 10:59:39 by antville         ###   ########.fr       */
+/*   Created: 2021/09/17 17:45:55 by dpoveda-          #+#    #+#             */
+/*   Updated: 2021/09/17 17:45:56 by dpoveda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include <libft/ft_char.h>
 

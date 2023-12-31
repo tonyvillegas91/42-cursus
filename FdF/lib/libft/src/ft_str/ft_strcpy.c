@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/31 11:07:19 by antville          #+#    #+#             */
-/*   Updated: 2023/12/31 11:07:19 by antville         ###   ########.fr       */
+/*   Created: 2021/09/17 17:46:45 by dpoveda-          #+#    #+#             */
+/*   Updated: 2021/09/17 17:46:46 by dpoveda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 char	*ft_strcpy(char *dst, const char *src)
 {

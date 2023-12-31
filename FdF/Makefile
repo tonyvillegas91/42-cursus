@@ -3,14 +3,12 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antville <antville@student.42.fr>          +#+  +:+       +#+         #
+#    By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/31 11:23:46 by antville          #+#    #+#              #
-#    Updated: 2023/12/31 11:23:46 by antville         ###   ########.fr        #
+#    Created: 2021/10/22 09:32:32 by dpoveda-          #+#    #+#              #
+#    Updated: 2021/11/21 21:38:35 by dpoveda-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-
 
 # COLORS
 NOCOL=\033[0m

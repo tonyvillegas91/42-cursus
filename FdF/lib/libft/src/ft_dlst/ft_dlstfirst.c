@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dlstfirst.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/31 11:00:20 by antville          #+#    #+#             */
-/*   Updated: 2023/12/31 11:00:20 by antville         ###   ########.fr       */
+/*   Created: 2021/10/04 16:38:40 by dpoveda-          #+#    #+#             */
+/*   Updated: 2021/10/04 16:39:16 by dpoveda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include <libft/ft_dlst.h>
 

@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ulonglen_base.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/31 11:05:48 by antville          #+#    #+#             */
-/*   Updated: 2023/12/31 11:05:48 by antville         ###   ########.fr       */
+/*   Created: 2021/09/27 14:54:06 by dpoveda-          #+#    #+#             */
+/*   Updated: 2021/09/27 15:03:08 by dpoveda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 int	ft_ulonglen_base(unsigned long n, int base_len)
 {

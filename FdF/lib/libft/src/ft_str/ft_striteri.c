@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/31 11:08:15 by antville          #+#    #+#             */
-/*   Updated: 2023/12/31 11:08:15 by antville         ###   ########.fr       */
+/*   Created: 2021/09/17 17:46:58 by dpoveda-          #+#    #+#             */
+/*   Updated: 2021/09/17 17:46:59 by dpoveda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include <libft/ft_str.h>
 

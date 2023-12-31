@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mem.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/31 10:57:33 by antville          #+#    #+#             */
-/*   Updated: 2023/12/31 10:57:33 by antville         ###   ########.fr       */
+/*   Created: 2021/09/27 15:47:01 by dpoveda-          #+#    #+#             */
+/*   Updated: 2021/09/27 15:50:38 by dpoveda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #ifndef FT_MEM_H
 # define FT_MEM_H
