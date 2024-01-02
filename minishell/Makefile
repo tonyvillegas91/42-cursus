@@ -3,228 +3,86 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dpoveda- <me@izenynn.com>                  +#+  +:+       +#+         #
+#    By: antville <antville@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/20 13:15:01 by dpoveda-          #+#    #+#              #
-#   Updated: 2021/12/16 21:34:38 by                  ###   ########.fr       # #
+#    Created: 2024/01/02 20:15:01 by antville          #+#    #+#              #
+#    Updated: 2024/01/02 20:15:01 by antville         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# **************************************************************************** #
-#                                     VARS                                     #
-# **************************************************************************** #
 
-# COLORS
-NOCOL=\033[0m
-RED=\033[31m
-GRN=\033[32m
-YEL=\033[33m
-BLU=\033[34m
-MAG=\033[35m
-CYN=\033[36m
-
-# OS
-UNAME_S := $(shell uname -s)
-
-# **************************************************************************** #
-#                                   PROGRAM                                    #
-# **************************************************************************** #
+# VARIABLE DECLARATIONS #
 
 NAME = minishell
-#NAME = msh
-
-BIN_DIR ?= /usr/local/bin
-
-# **************************************************************************** #
-#                                   COMPILER                                   #
-# **************************************************************************** #
-
-MAKE = make
-
 CC = gcc
+RM = rm -f
+MAKE = make
+READLINE = -L ~/.brew/opt/readline/lib -lreadline
+CFLAGS = -Wall -Werror -Wextra -I ~/.brew/opt/readline/include -g3
+DEBUG = -g3 -fsanitize=address
 
-CFLAGS += -Wall -Wextra -Werror
+# COLORS #
 
-# **************************************************************************** #
-#                                    PATHS                                     #
-# **************************************************************************** #
+RED = \033[0;31m
+GREEN = \033[0;32m
+YELLOW = \033[0;33m
+GREY = \033[2;37m
+MAGENTA = \033[0;35m
+CURSIVE = \033[3m
+NO_COLOR = \033[0m
 
-SRC_PATH = src
-OBJ_PATH = obj
-INC_PATH = inc
+# SOURCES & OBJECTS #
 
-# **************************************************************************** #
-#                                    FLAGS                                     #
-# **************************************************************************** #
+SRCS =	srcs/main.c \
+		srcs/error_msg.c \
+		srcs/read_input.c \
+		srcs/signal.c \
+		srcs/redirections.c \
+		srcs/builtins/cd.c \
+		srcs/builtins/pwd.c \
+		srcs/builtins/echo.c \
+		srcs/builtins/env.c \
+		srcs/builtins/env_list.c \
+		srcs/builtins/export.c \
+		srcs/builtins/unset.c \
+		srcs/builtins/exit.c \
+		srcs/executer/exec_args.c \
+		srcs/executer/exec_cmd.c \
+		srcs/executer/pipes.c \
+		srcs/executer/args_list.c \
+		srcs/executer/here_doc.c \
+		srcs/lexer/check_args.c \
+		srcs/lexer/expand.c \
+		srcs/lexer/expand_aux.c \
+		srcs/lexer/quotes.c \
+		srcs/lexer/split_args.c \
+		srcs/lexer/token.c \
+		srcs/lexer/check_error_pipes.c \
 
-CFLAGS += -I ./$(INC_PATH)
+OBJS = $(SRCS:.c=.o)
 
-# **************************************************************************** #
-#                                   SOURCES                                    #
-# **************************************************************************** #
+# RULES #
 
-SRC_DIR_MAIN	= main
-SRC_DIR_BUILTIN	= built-in
-SRC_DIR_EXEC	= exec
-SRC_DIR_LEXER	= lexer
-SRC_DIR_PARSER	= parser
-SRC_DIR_PROMPT	= prompt
-SRC_DIR_UTILS	= utils
-
-OBJ_DIRS_NAME =	$(SRC_DIR_MAIN)		$(SRC_DIR_BUILTIN)	$(SRC_DIR_EXEC)		\
-				$(SRC_DIR_LEXER)	$(SRC_DIR_PARSER)	$(SRC_DIR_PROMPT)	\
-				$(SRC_DIR_UTILS)
-
-OBJ_DIRS = $(addprefix $(OBJ_PATH)/, $(OBJ_DIRS_NAME))
-
-SRC_ROOT =		main.c
-
-SRC_MAIN = 		handle_line.c
-
-SRC_BUILTIN =	cd.c				echo.c				env.c				\
-				exit.c				export.c			pwd.c				\
-				unset.c				cd_error.c			export_utils.c		\
-				cd_utils.c			unset_utils.c
-
-SRC_EXEC =		exec.c				exec_ast.c			exec_cmd.c			\
-				utils.c				exec_heredoc.c		heredoc.c			\
-				handle_zombies.c	redir.c				redir_types.c		\
-				path.c
-
-SRC_LEXER =		lexer.c				utils_1.c			utils_2.c			\
-				pc_gen_st.c			pc_other_st.c		process_tokens.c	\
-				token_utils.c		handle_expand.c		expand.c			\
-				wildcards.c			wc_match.c			wc_match_frag.c		\
-				wc_utils.c			wc_check.c
-
-SRC_PARSER =	parser.c			parser_utils.c		ast_utils_1.c		\
-				ast_utils_2.c		parse_cmd_line.c	parse_and_or_1.c	\
-				parse_and_or_2.c	parse_job.c			parse_cmd.c			\
-				parse_tok_lst.c		parse_redir.c		parse_redir_in.c	\
-				parse_redir_out.c
-
-SRC_PROMPT =	prompt.c
-
-SRC_UTILS =		init.c				error_utils.c		signals.c			\
-				custom_len.c		ft_getenv.c			env_utils.c			\
-				init_utils.c		read_config.c		new_tmp.c
-
-SRC_NAME =	$(SRC_ROOT)														\
-			$(addprefix $(SRC_DIR_MAIN)/, $(SRC_MAIN))						\
-			$(addprefix $(SRC_DIR_BUILTIN)/, $(SRC_BUILTIN))				\
-			$(addprefix $(SRC_DIR_EXEC)/, $(SRC_EXEC))						\
-			$(addprefix $(SRC_DIR_LEXER)/, $(SRC_LEXER))					\
-			$(addprefix $(SRC_DIR_PARSER)/, $(SRC_PARSER))					\
-			$(addprefix $(SRC_DIR_PROMPT)/, $(SRC_PROMPT))					\
-			$(addprefix $(SRC_DIR_UTILS)/, $(SRC_UTILS))
-
-OBJ_NAME = $(SRC_NAME:%.c=%.o)
-
-SRC = $(addprefix $(SRC_PATH)/, $(SRC_NAME))
-OBJ = $(addprefix $(OBJ_PATH)/, $(OBJ_NAME))
-
-# **************************************************************************** #
-#                                     LIBS                                     #
-# **************************************************************************** #
-
-LFT_NAME = libft.a
-LFT_DIR = libft
-LFT = $(LFT_DIR)/$(LFT_NAME)
-
-CFLAGS += -I ./$(LFT_DIR)/$(INC_PATH)
-
-LDFLAGS = -L ./$(LFT_DIR)
-
-LDLIBS = -lft
-
-LDLIBS += -lreadline
-
-# **************************************************************************** #
-#                                    RULES                                     #
-# **************************************************************************** #
-
-.PHONY: all sanitize thread clean fclean re norme
-
-# ALL
 all: $(NAME)
 
-# NAME
-$(NAME): $(OBJ) $(LFT_NAME)
-	@printf "\n${YEL}LINKING:${NOCOL}\n"
-	@printf "${BLU}"
-	$(CC) $(CFLAGS) $(OBJ) $(LFT_NAME) -o $@ $(LDFLAGS) $(LDLIBS) $(CCFLAGS)
-	@printf "${NOCOL}"
-	@printf "\n${GRN}SUCCESS!${NOCOL}\n"
-	@printf "${CYN}type \"./$(NAME)\" to start!${NOCOL}\n"
+$(NAME): $(OBJS)
+	@$(MAKE) -s all -C libft
+	@$(CC) $(CFLAGS) $(OBJS) libft/libft.a $(READLINE) -o $(NAME)
+	@echo "$(GREY) Minishell compiled $(GREEN) ✔✔✔ $(NO_COLOR)"
 
-# INSTALL
-install: $(NAME)
-	install $(NAME) $(BIN_DIR)
-
-# SANITIZE ADDRESS
-ifeq ($(UNAME_S),Linux)
-sanitize: CFLAGS += -pedantic -g3 -fsanitize=address -fsanitize=leak -fsanitize=undefined -fsanitize=bounds -fsanitize=null
-endif
-ifeq ($(UNAME_S),Darwin)
-sanitize: CFLAGS += -pedantic -g3 -fsanitize=address
-endif
-sanitize: $(NAME)
-
-# SANITIZE THREAD
-thread: CFLAGS += -g3 -fsanitize=thread
-thread: $(NAME)
-
-# LIBFT
-$(LFT_NAME): $(LFT)
-	@printf "${MAG}"
-	cp $(LFT) $(LFT_NAME)
-	@printf "${NOCOL}"
-$(LFT):
-	@printf "\n${YEL}LIBFT:${NOCOL}\n"
-	@printf "${MAG}"
-	$(MAKE) all -sC $(LFT_DIR)
-	@printf "${NOCOL}"
-
-# OBJ
-$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c | $(OBJ_DIRS)
-	@printf "${BLU}"
-	$(CC) $(CFLAGS) -c $< -o $@
-	@printf "${NOCOL}"
-
-# OBJ DIRS
-$(OBJ_DIRS): | $(OBJ_PATH)
-	@printf "${MAG}"
-	mkdir -p $(OBJ_DIRS)
-	@printf "${NOCOL}"
-$(OBJ_PATH):
-	@printf "${MAG}"
-	mkdir -p $(OBJ_PATH)
-	@printf "${NOCOL}"
-
-# CLEAN
 clean:
-	@printf "${RED}"
-	$(MAKE) clean -sC $(LFT_DIR)
-	rm -rf $(LFT_NAME)
-	rm -rf $(OBJ_PATH)
-	@printf "${NOCOL}"
+	@clear
+	@$(RM) $(OBJS)
+	@$(MAKE) clean -C libft
+	@echo "$(RED) **** Object files removed **** $(NO_COLOR)"
 
-# FULL CLEAN
 fclean: clean
-	@printf "${RED}"
-	$(MAKE) fclean -sC $(LFT_DIR)
-	rm -rf $(NAME)
-	@printf "${NOCOL}"
+	@$(RM) $(NAME)
+	@$(RM) libft/libft.a
+	@echo "$(RED) **** Fclean done **** $(NO_COLOR)"
 
-# RE
 re: fclean all
 
-# NORMINETTE
-norme:
-	@printf "\n${GRN}##########${YEL} NORMINETTE ${GRN}##########${NOCOL}\n"
-	@printf "\n${GRN}LIBFT:${BLU}\n\n"
-	@norminette $(LFT_DIR)
-	@printf "\n${GRN}MINISHELL:${BLU}\n\n"
-	@norminette $(INC_PATH)
-	@norminette $(SRC_PATH)
-	@printf "${NOCOL}"
+.PHONY: all re clean fclean test
+
+.SILENT: $(OBJS)
