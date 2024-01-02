@@ -46,10 +46,6 @@
 *.mod*
 *.cmd
 .tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
 
 # MAC OS files
 .DS_Store
@@ -78,3 +74,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Program name
+minishell
+
+# Test files
+in
+infile
+out
+outfile
