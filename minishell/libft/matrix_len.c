@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   matrix_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/10 21:25:06 by ldurante          #+#    #+#             */
-/*   Updated: 2021/12/10 21:25:24 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:33:03 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:33:03 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 21:50:53 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/22 13:37:35 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:29:47 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:29:47 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Returns the last element of the list */
 

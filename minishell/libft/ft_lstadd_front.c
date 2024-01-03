@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 21:02:38 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/16 12:50:38 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:29:22 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:29:22 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Adds the element ’new’ at the beginning of thelist */
 

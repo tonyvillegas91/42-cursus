@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 13:22:22 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/22 17:55:37 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:30:25 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:30:25 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

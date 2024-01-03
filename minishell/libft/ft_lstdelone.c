@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 22:35:31 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/19 00:05:05 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:29:31 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:29:31 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Takes as a parameter an element and frees the
 ** memory of the element’s content using the function’del’ 

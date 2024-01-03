@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 17:59:53 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/06 19:31:30 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:30:32 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:30:32 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 11:10:36 by ldurante          #+#    #+#             */
-/*   Updated: 2021/12/09 13:18:38 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:31:42 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:31:42 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

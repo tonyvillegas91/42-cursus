@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 16:49:31 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/13 10:22:42 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:31:20 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:31:20 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Allocates (with malloc(3)) and returns a new
 string, which is the result of the concatenation

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   signal.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 13:02:45 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/31 19:38:29 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:35:13 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:35:13 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../includes/minishell.h"
 

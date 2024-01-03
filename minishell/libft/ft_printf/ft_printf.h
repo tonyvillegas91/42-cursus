@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/20 13:06:34 by ldurante          #+#    #+#             */
-/*   Updated: 2021/09/30 23:50:43 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:27:06 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:27:06 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/22 16:51:10 by ldurante          #+#    #+#             */
-/*   Updated: 2021/10/19 20:58:25 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:32:29 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:32:29 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 09:59:52 by ldurante          #+#    #+#             */
-/*   Updated: 2021/12/15 02:36:38 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:29:00 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:29:00 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Allocates (with malloc(3)) and returns a string
 ** representing the integer received as an argument.

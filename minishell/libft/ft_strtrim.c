@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 17:59:39 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/13 19:22:11 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:32:06 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:32:06 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

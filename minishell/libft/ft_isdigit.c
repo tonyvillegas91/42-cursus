@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 09:10:18 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/08 10:01:05 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:28:47 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:28:47 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

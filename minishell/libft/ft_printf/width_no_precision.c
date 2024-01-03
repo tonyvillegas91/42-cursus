@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   width_no_precision.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/18 16:40:16 by ldurante          #+#    #+#             */
-/*   Updated: 2021/10/01 00:53:34 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:27:45 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:27:45 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "ft_printf.h"
 

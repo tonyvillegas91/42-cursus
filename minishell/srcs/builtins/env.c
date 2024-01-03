@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   env.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:02:43 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/20 10:27:05 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:33:31 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:33:31 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../includes/minishell.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   token.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 13:43:03 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/19 18:15:07 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:34:47 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:34:47 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../includes/minishell.h"
 

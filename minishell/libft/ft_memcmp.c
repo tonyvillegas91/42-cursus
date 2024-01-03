@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 15:31:10 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/08 15:51:19 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:30:14 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:30:14 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

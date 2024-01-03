@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 21:35:57 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/22 13:37:38 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:29:51 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:29:51 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Iterates the list ’lst’ and applies the function’f’ 
 to the content of each element. Creates a newlist 

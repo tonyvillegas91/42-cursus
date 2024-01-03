@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   quotes.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 11:50:08 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/20 00:37:15 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:34:37 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:34:37 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../includes/minishell.h"
 

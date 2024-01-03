@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 11:24:01 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/22 17:21:05 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:32:00 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:32:00 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

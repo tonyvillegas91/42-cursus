@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   check_error_pipes.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 10:09:11 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/20 15:54:10 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:34:23 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:34:23 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../includes/minishell.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   redirections.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 03:03:21 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/27 17:15:08 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:35:09 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:35:09 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../includes/minishell.h"
 

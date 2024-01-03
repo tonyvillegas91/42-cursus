@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lst_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/19 16:37:17 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/19 23:24:34 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:29:10 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:29:10 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

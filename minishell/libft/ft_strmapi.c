@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 12:50:46 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/13 18:17:17 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:31:47 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:31:47 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Applies the function ’f’ to each character of the
 ** string ’s’ to create a new string (with malloc(3))

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 15:32:43 by ldurante          #+#    #+#             */
-/*   Updated: 2021/12/15 11:48:41 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:31:52 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:31:52 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

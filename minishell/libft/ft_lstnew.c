@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 11:19:59 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/16 12:28:42 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:29:55 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:29:55 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Allocates (with malloc(3)) and returns a new
 ** element. The variable ’content’ is initialized

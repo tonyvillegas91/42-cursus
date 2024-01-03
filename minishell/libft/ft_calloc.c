@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/09 10:45:38 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/12 00:29:56 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:28:19 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:28:19 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

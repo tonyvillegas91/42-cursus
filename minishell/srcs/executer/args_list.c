@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   args_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 10:13:09 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/20 10:29:38 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:33:54 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:33:54 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../includes/minishell.h"
 

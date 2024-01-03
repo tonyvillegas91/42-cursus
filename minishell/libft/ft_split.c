@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 19:23:22 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/16 12:52:51 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:31:02 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:31:02 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Allocates (with malloc(3)) and returns an array
 ** of strings obtained by splitting ’s’ using the

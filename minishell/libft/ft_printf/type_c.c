@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   type_c.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 15:46:48 by durante           #+#    #+#             */
-/*   Updated: 2021/10/01 00:52:57 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:27:19 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:27:19 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "ft_printf.h"
 

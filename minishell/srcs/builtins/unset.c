@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   unset.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 13:30:46 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/20 02:26:17 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:33:48 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:33:48 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../includes/minishell.h"
 

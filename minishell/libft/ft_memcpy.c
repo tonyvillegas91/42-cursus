@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 11:01:04 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/08 18:48:14 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:30:20 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:30:20 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_new_node.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 18:00:12 by ldurante          #+#    #+#             */
-/*   Updated: 2021/11/10 18:03:59 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:30:39 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:30:39 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

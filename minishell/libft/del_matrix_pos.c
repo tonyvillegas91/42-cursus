@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   del_matrix_pos.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/22 19:57:06 by ldurante          #+#    #+#             */
-/*   Updated: 2021/12/22 19:57:41 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:27:54 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:27:54 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 09:36:37 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/09 12:49:56 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:28:52 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:28:52 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

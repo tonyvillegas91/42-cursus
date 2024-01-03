@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 19:35:34 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/07 10:53:35 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:28:14 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:28:14 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

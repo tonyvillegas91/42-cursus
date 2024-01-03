@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 19:34:32 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/13 17:30:53 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:30:57 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:30:57 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 /* Outputs the string ’s’ to the given file
 descriptor. */

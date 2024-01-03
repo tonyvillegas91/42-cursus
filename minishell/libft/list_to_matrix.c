@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   list_to_matrix.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/10 18:34:58 by ldurante          #+#    #+#             */
-/*   Updated: 2021/12/14 18:27:09 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:32:40 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:32:40 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 

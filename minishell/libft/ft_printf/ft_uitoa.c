@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/21 12:01:41 by ldurante          #+#    #+#             */
-/*   Updated: 2021/10/01 00:52:51 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:27:14 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:27:14 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "ft_printf.h"
 

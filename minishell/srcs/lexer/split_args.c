@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   split_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 13:50:19 by ldurante          #+#    #+#             */
-/*   Updated: 2022/01/18 19:01:38 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:34:42 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:34:42 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../../includes/minishell.h"
 

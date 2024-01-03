@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antville <antville@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 17:16:35 by ldurante          #+#    #+#             */
-/*   Updated: 2021/04/08 10:00:56 by ldurante         ###   ########.fr       */
+/*   Created: 2024/01/03 15:28:27 by antville          #+#    #+#             */
+/*   Updated: 2024/01/03 15:28:27 by antville         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
